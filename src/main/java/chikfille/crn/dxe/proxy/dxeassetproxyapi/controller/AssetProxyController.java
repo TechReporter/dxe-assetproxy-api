@@ -24,6 +24,11 @@ public class AssetProxyController {
 	public ResponseEntity<JsonNode> allSpaceRecord(@PathVariable(value="assetType") String assetType) {
 		return new ResponseEntity<>(dxeAssetProxyService.allSpaceRecord(assetType), HttpStatus.OK) ;
 	}
+	
+	@GetMapping(value="/space")
+	public ResponseEntity<JsonNode> spaceRecord() {
+		return new ResponseEntity<>(dxeAssetProxyService.spaceRecord(), HttpStatus.OK) ;
+	}
 
 	@GetMapping(value="/content/{assetType}/{itemId}")
 	public ResponseEntity<JsonNode> singleSpaceRecord(@PathVariable("assetType") String assetType,

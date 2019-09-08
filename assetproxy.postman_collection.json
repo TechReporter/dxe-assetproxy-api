@@ -189,6 +189,66 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": " localhost:8910/asset/contents/content_types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/contents/content_types",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"contents",
+						"content_types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/space",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/space",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"space"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/content/content_types/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/content/content_types/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"content",
+						"content_types",
+						"product"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

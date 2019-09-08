@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 public interface DxeAssetProxyService {
 
+	public JsonNode spaceRecord();
 	public JsonNode allSpaceRecord(String assetType);
 	public JsonNode singleSpacRecord(String assetType, String itemId);
 	public JsonNode recordByContentType(String assetType, String contentType);

@@ -27,12 +27,17 @@ public class DxeAssetProxyServiceImpl implements DxeAssetProxyService {
 	static final String ACCESS_TOKEN="?access_token=";
 	static final String CONTENT_TYPE="&content_type=";
 	static final String LOCALE="&locale=";
+	static final String ENV="environments";
+	static final String BRANCH="master";
+	static final String SEPERATOR="/";
 
 
 	@Override
 	public JsonNode allSpaceRecord(String assetType) {
 		JsonNode jsonNode = null;
-		String assetUrl = resourceConfig.getContentulBaseUrl().concat("/")
+		
+		String assetUrl = resourceConfig.getContentulBaseUrl().concat(SEPERATOR).concat(ENV)
+				.concat(SEPERATOR).concat(BRANCH).concat(SEPERATOR)
 				.concat(assetType).concat(ACCESS_TOKEN).concat(resourceConfig.getAccessToken());
 		String assetResponse = restTemplate.getForObject(assetUrl, String.class);
 		if(!assetResponse.isEmpty()) {
@@ -51,8 +56,9 @@ public class DxeAssetProxyServiceImpl implements DxeAssetProxyService {
 	@Override
 	public JsonNode singleSpacRecord(String assetType, String itemId) {
 		JsonNode jsonNode = null;
-		String assetUrl = resourceConfig.getContentulBaseUrl().concat("/")
-				.concat(assetType).concat("/")
+		String assetUrl = resourceConfig.getContentulBaseUrl().concat(SEPERATOR).concat(ENV)
+				.concat(SEPERATOR).concat(BRANCH).concat(SEPERATOR)
+				.concat(assetType).concat(SEPERATOR)
 				.concat(itemId).concat(ACCESS_TOKEN).concat(resourceConfig.getAccessToken());
 		String assetResponse = restTemplate.getForObject(assetUrl, String.class);
 		if(!assetResponse.isEmpty()) {
@@ -70,7 +76,8 @@ public class DxeAssetProxyServiceImpl implements DxeAssetProxyService {
 	@Override
 	public JsonNode recordByContentType(String assetType, String contentType) {
 		JsonNode jsonNode = null;
-		String assetUrl = resourceConfig.getContentulBaseUrl().concat("/")
+		String assetUrl = resourceConfig.getContentulBaseUrl().concat(SEPERATOR).concat(ENV)
+				.concat(SEPERATOR).concat(BRANCH).concat(SEPERATOR)
 				.concat(assetType).concat(ACCESS_TOKEN).concat(resourceConfig.getAccessToken())
 				.concat(CONTENT_TYPE).concat(contentType);
 		String assetResponse = restTemplate.getForObject(assetUrl, String.class);
@@ -90,10 +97,30 @@ public class DxeAssetProxyServiceImpl implements DxeAssetProxyService {
 	@Override
 	public JsonNode recordByCountryType(String itemId, String assetType, String countryType) {
 		JsonNode jsonNode = null;
-		String assetUrl = resourceConfig.getContentulBaseUrl().concat("/")
-				.concat(assetType).concat("/")
+		String assetUrl = resourceConfig.getContentulBaseUrl().concat(SEPERATOR).concat(ENV)
+				.concat(SEPERATOR).concat(BRANCH).concat(SEPERATOR)
+				.concat(assetType).concat(SEPERATOR)
 				.concat(itemId).concat(ACCESS_TOKEN).concat(resourceConfig.getAccessToken())
 				.concat(LOCALE).concat(countryType);
+		String assetResponse = restTemplate.getForObject(assetUrl, String.class);
+		if(!assetResponse.isEmpty()) {
+			try {
+				ObjectMapper mapper = new ObjectMapper();
+				jsonNode = mapper.readTree(assetResponse);
+				return jsonNode;
+			} catch (IOException e) {
+				LOG.error(e.getMessage());
+			}
+		}
+		return null;
+	}
+
+
+	@Override
+	public JsonNode spaceRecord() {
+		JsonNode jsonNode = null;
+		String assetUrl = resourceConfig.getContentulBaseUrl()
+				.concat(ACCESS_TOKEN).concat(resourceConfig.getAccessToken());
 		String assetResponse = restTemplate.getForObject(assetUrl, String.class);
 		if(!assetResponse.isEmpty()) {
 			try {
