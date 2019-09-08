@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "ec62d2cd-b988-4f78-945d-86e9e82f5a36",
+		"name": "assetproxy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8910/asset/countryImage/entries/2NyigLqMFeIDwhPcQiPuht/en-CA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/countryImage/entries/2NyigLqMFeIDwhPcQiPuht/en-CA",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"countryImage",
+						"entries",
+						"2NyigLqMFeIDwhPcQiPuht",
+						"en-CA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/content/entries/36iRQLzjrN3kpyZYYhmklV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/content/entries/36iRQLzjrN3kpyZYYhmklV",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"content",
+						"entries",
+						"36iRQLzjrN3kpyZYYhmklV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/contents/locales",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/contents/locales",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"contents",
+						"locales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/contents/entries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/contents/entries",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"contents",
+						"entries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/contents/assets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/contents/assets",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"contents",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/assets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/assets",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"assets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/content/assets/piPvvdioXA5pIUFF7JbQ1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/content/assets/piPvvdioXA5pIUFF7JbQ1",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"content",
+						"assets",
+						"piPvvdioXA5pIUFF7JbQ1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/countryImage/entries/2NyigLqMFeIDwhPcQiPuht/en-CA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/countryImage/entries/2NyigLqMFeIDwhPcQiPuht/en-CA",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"countryImage",
+						"entries",
+						"2NyigLqMFeIDwhPcQiPuht",
+						"en-CA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8910/asset/contents/entries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8910/asset/contents/entries",
+					"host": [
+						"localhost"
+					],
+					"port": "8910",
+					"path": [
+						"asset",
+						"contents",
+						"entries"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
